@@ -1,6 +1,6 @@
 # Core dependencies
-torch>=2.4.1
-torchvision>=0.15.0
+#torch>=2.4.1
+#torchvision>=0.15.0
 transformers==4.45.0
 diffusers==0.30.0
 accelerate==0.33.0
