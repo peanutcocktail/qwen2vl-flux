@@ -3,15 +3,15 @@ from torch import nn
 from PIL import Image
 from transformers import CLIPTokenizer, CLIPTextModel, AutoProcessor, T5EncoderModel, T5TokenizerFast
 from diffusers import AutoencoderKL, FlowMatchEulerDiscreteScheduler
-from flux.transformer_flux import FluxTransformer2DModel
+from .flux.transformer_flux import FluxTransformer2DModel
 
-from flux.pipeline_flux_chameleon import FluxPipeline
-from flux.pipeline_flux_img2img import FluxImg2ImgPipeline
-from flux.pipeline_flux_inpaint import FluxInpaintPipeline
-from flux.pipeline_flux_controlnet import FluxControlNetPipeline, FluxControlNetModel
-from flux.pipeline_flux_controlnet_img2img import FluxControlNetImg2ImgPipeline
-from flux.controlnet_flux import FluxMultiControlNetModel
-from flux.pipeline_flux_controlnet_inpainting import FluxControlNetInpaintPipeline
+from .flux.pipeline_flux_chameleon import FluxPipeline
+from .flux.pipeline_flux_img2img import FluxImg2ImgPipeline
+from .flux.pipeline_flux_inpaint import FluxInpaintPipeline
+from .flux.pipeline_flux_controlnet import FluxControlNetPipeline, FluxControlNetModel
+from .flux.pipeline_flux_controlnet_img2img import FluxControlNetImg2ImgPipeline
+from .flux.controlnet_flux import FluxMultiControlNetModel
+from .flux.pipeline_flux_controlnet_inpainting import FluxControlNetInpaintPipeline
 
 from controlnet_aux import AnylineDetector
 from depth_anything_v2.dpt import DepthAnythingV2
@@ -21,7 +21,7 @@ from sam2.sam2_image_predictor import SAM2ImagePredictor
 from diffusers.pipelines.stable_diffusion.safety_checker import (
     StableDiffusionSafetyChecker,
 )
-from qwen2_vl.modeling_qwen2_vl import Qwen2VLSimplifiedModel
+from .qwen2_vl.modeling_qwen2_vl import Qwen2VLSimplifiedModel
 import os
 import cv2
 import numpy as np
